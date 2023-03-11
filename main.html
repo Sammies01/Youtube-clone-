@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+        integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- NAVBAR --> 
+    <nav class="flex bg-white justify-between items-center w-full h-12 fixed">
+        <!-- <div class="bg-green-600 flex  w-fit"> -->
+        <div class="flex items-center">
+            <svg class="flex cursor-pointer rounded-full hover:bg-gray-300 p-1" xmlns="http://www.w3.org/2000/svg"
+                width="35" height="35" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z" />
+            </svg>
+            <img class="flex items-center m-3 cursor-pointer " src="./images/YouTube_TV_logo.svg.png" width="80px"
+                height="19px" alt="">
+        </div>
+
+        <div class="flex grow items-center justify-center">
+            <div class="flex items-center justify-center grow">
+                <input type="text" placeholder="Search"
+                    class="border border-gray-300 h-7 text-sm rounded-l-2xl pl-4 px-1 py-2 focus:outline-none focus:border-blue-600 w-2/5">
+                <button
+                    class="border border-l-0 border-gray-300 bg-gray-100 hover:bg-gray-200 hover:border-gray-350 rounded-r-2xl w-10 h-7 flex items-center justify-center">
+                    ` <svg class=" md:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z" />
+                    </svg>
+                </button>
+                <svg class="cursor-pointer rounded-full hover:bg-gray-300 h-7 w-7 p-1 ml-5"
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                    <path fill="currentColor"
+                        d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+                </svg>
+            </div>
+
+        </div>
+
+        <div class="flex items-center space-x-3 mr-2">
+            <div><svg class="cursor-pointer rounded-full hover:bg-gray-300 h-7 w-7 p-1"
+                    xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 32 32">
+                    <path fill="currentColor" d="M18 15h-4v-4h-2v4H8v2h4v4h2v-4h4v-2z" />
+                    <path fill="currentColor"
+                        d="M21 26H4a2.002 2.002 0 0 1-2-2V8a2.002 2.002 0 0 1 2-2h17a2.002 2.002 0 0 1 2 2v4.057l5.419-3.87A1 1 0 0 1 30 9v14a1 1 0 0 1-1.581.814L23 19.944V24a2.002 2.002 0 0 1-2 2ZM4 8v16.001L21 24v-6a1 1 0 0 1 1.581-.814L28 21.056V10.944l-5.419 3.87A1 1 0 0 1 21 14V8Z" />
+                </svg>
+            </div>
+            <div><svg class="cursor-pointer rounded-full hover:bg-gray-300 h-7 w-7 p-1"
+                    xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                </svg>
+            </div>
+            <img class="rounded-full w-7 h-7 cursor-pointer" src="./images/1557907305675.jpg" alt="profile-pic">
+        </div>
+        <!-- </div> -->
+    </nav>
+
+    <!-- SIDE MENU -->
+
+    <div class="flex pt-12">
+        <div class="overflow-y-scroll h-full fixed w-fit bg-white">
+            <aside class="">
+                <div class=" space-y-0 p-1 pb-3">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 bg-gray-100 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M6 21q-.825 0-1.412-.587Q4 19.825 4 19v-9q0-.475.213-.9q.212-.425.587-.7l6-4.5q.275-.2.575-.3q.3-.1.625-.1t.625.1q.3.1.575.3l6 4.5q.375.275.588.7q.212.425.212.9v9q0 .825-.587 1.413Q18.825 21 18 21h-4v-7h-4v7Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Home</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-100 rounded-lg">
+                        <img src="./images/YouTube_Shorts_29.png" width="19" alt="">
+                        <span class="text-sm ml-5">Shorts</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M4 6h16v2H4zm2-4h12v2H6zm14 8H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 10H4v-8h16v8zm-10-7.27v6.53L16 16z" />
+                        </svg>
+                        <span class="text-sm ml-4">Subscriptions</span>
+                    </div>
+                </div>
+                <hr>
+                <div class=" space-y-0 p-1 pb-3">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Library</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-100 rounded-lg">
+                        <img src="./images/YouTube_Shorts_29.png" width="19" alt="">
+                        <span class="text-sm ml-5">History</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M4 6h16v2H4zm2-4h12v2H6zm14 8H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 10H4v-8h16v8zm-10-7.27v6.53L16 16z" />
+                        </svg>
+                        <span class="text-sm ml-4">Your Videos</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Watch later</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Download</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Liked videos</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Download later</span>
+                    </div>
+                </div>
+                <hr>
+                <h1 class="mt-3 ml-6 ">Subscriptions</h1>
+                <div class=" space-y-0 p-1 pb-3 pt-0">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">la liga</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Decacode73</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Show 5 more</span>
+                    </div>
+                </div>
+                <hr>
+                <h1 class="mt-3 ml-6">Explore</h1>
+                <div class=" space-y-0 p-1 pb-3">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Trending</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Music</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Gaming</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">News</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">sports</span>
+                    </div>
+                </div>
+                <hr>
+                <p class="mt-3 ml-6">More from TouTube</p>
+                <div class=" space-y-0 p-1 pb-3 pt-0">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">YouTube Premium</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">YouTube Studio</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">YouTube Music</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">YouTube Kids</span>
+                    </div>
+                </div>
+                <hr>
+                <div class=" space-y-0 p-1 pb-3 pt-0">
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Setting</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Report history</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Help</span>
+                    </div>
+                    <div
+                        class="flex h-8 px-2 mt-4 ml-2 items-center cursor-pointer hover:rounded-lg hover:bg-gray-200 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m11.5 14.5l7-4.5l-7-4.5ZM8 18q-.825 0-1.412-.587Q6 16.825 6 16V4q0-.825.588-1.413Q7.175 2 8 2h12q.825 0 1.413.587Q22 3.175 22 4v12q0 .825-.587 1.413Q20.825 18 20 18Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.412-.587Q2 20.825 2 20V6h2v14h14v2ZM8 4v12V4Z" />
+                        </svg>
+                        <span class="text-sm ml-4">Send feedback</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-sm ml-2">
+                    <p>About Press Copyright</p>
+                    <p>Contact us Creators</p>
+                    <p>Advertise Developers</p>
+                    <br>
+                    <p>Terms Privacy Policy & Safety</p>
+                    <p>How YouTube works</p>
+                    <p>Test new features</p>
+                    <br>
+                    <p>2023 Google LLC</p>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- recomendation bar -->
+        <div>
+            <section class="pl-56 flex w-screen h-10 white">
+                <ul class="flex space-x-3 items-center px-3 justify-between w-screen">
+                    <li class="rounded-md bg-black text-white px-2 py-1 text-sm ml-8">ALL</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Wrestling</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Messi</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Goals</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">CSS
+                    </li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Music</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Stations</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">CR7
+                    </li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Uploads</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        icon</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Recently</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        Highlights</li>
+                    <li class="rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-2 py-1 text-sm">
+                        icon</li>
+
+                </ul>
+            </section>
+        </div>
+
+
+
+
+
+    </div>
+    <div>
+        <main class="ml-56 pt-">
+            <div class="border-b-4 border-gray-300 border-opacity-75 pb-12">
+                <h3 class="text-xl font-bold">Recommended</h3>
+                <div class="mt-4 grid grid-cols-4 gap-4 pl-1 pt-1">
+                    <div>
+                        <div class="w-68">
+                            <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                                <img src="./images/3d_1764 - Copy.jpg" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-68">
+                        <div class="h-40 w-full bg-gray-700 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                alt="">
+                        </div>
+                        <div class="flex mt-2">
+                            <div class="h-10 w-10 bg-blue-300 rounded-full flex-shrink-0 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="ml-2">
+                                <div class="text-sm font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing.
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p>Channel Name</p>
+                                    <p>9 hours ago &middot; 87k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-4">
+                <h3 class="text-xl font-bold">Latest Youtube posts</h3>
+                <div class="mt-2 grid grid-cols-3 gap-6">
+                    <div class="w-92 bg-white flex flex-col px-3 py-2 border border-gray-400">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-blue-300 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="text-sm text-gray-600 ml-2">
+                                <p>Lorem ipsum &middot 6 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="flex mt-3">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, reiciendis.
+                            </p>
+                            <div class="w-32 h-32 bg-gray-600 flex-shrink-0 overflow-hidden" class="object-cover">
+                                <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                    alt="" class="object-cover h-full">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-sm text-gray-600 mt-3">
+                            <div class="flex items-center">
+                                <button><i class="material-icons small">thumb_up</i></button>
+                                <div class="ml-1">179</div>
+                                <button class="ml-2"><i class="material-icons small">thumb_down</i></button>
+                            </div>
+                            <div class="flex items-start">
+                                <button><i class="material-icons small">comment</i></button>
+                                <div class="ml-1">24</div>
+                                <button class="ml-3"><i class="material-icons small">
+                                        more_vert
+                                    </i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-94 bg-white flex flex-col px-3 py-2 border border-gray-400">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-blue-300 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="text-sm text-gray-600 ml-2">
+                                <p>Lorem ipsum &middot 6 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="flex mt-3">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, reiciendis.
+                            </p>
+                            <div class="w-32 h-32 bg-gray-600 flex-shrink-0 overflow-hidden" class="object-cover">
+                                <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                    alt="" class="object-cover h-full">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-sm text-gray-600 mt-3">
+                            <div class="flex items-center">
+                                <button><i class="material-icons small">thumb_up</i></button>
+                                <div class="ml-1">179</div>
+                                <button class="ml-2"><i class="material-icons small">thumb_down</i></button>
+                            </div>
+                            <div class="flex items-start">
+                                <button><i class="material-icons small">comment</i></button>
+                                <div class="ml-1">24</div>
+                                <button class="ml-3"><i class="material-icons small">
+                                        more_vert
+                                    </i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-94 bg-white flex flex-col px-3 py-2 border border-gray-400">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-blue-300 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1570724061670-86a53c509dee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                                    alt="">
+                            </div>
+                            <div class="text-sm text-gray-600 ml-2">
+                                <p>Lorem ipsum &middot 6 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="flex mt-3">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, reiciendis.
+                            </p>
+                            <div class="w-32 h-32 bg-gray-600 flex-shrink-0 overflow-hidden" class="object-cover">
+                                <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                    alt="" class="object-cover h-full">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-sm text-gray-600 mt-3">
+                            <div class="flex items-center">
+                                <button><i class="material-icons small">thumb_up</i></button>
+                                <div class="ml-1">179</div>
+                                <button class="ml-2"><i class="material-icons small">thumb_down</i></button>
+                            </div>
+                            <div class="flex items-start">
+                                <button><i class="material-icons small">comment</i></button>
+                                <div class="ml-1">24</div>
+                                <button class="ml-3"><i class="material-icons small">
+                                        more_vert
+                                    </i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>
